@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const replicate = new Replicate({
-    auth: "r8_QYTENO4WMfrLI2NX6FNZlVLDRKjBd693MR1Gh",
+    auth: process.env.REPLICATE_AUTH,
 });
 
 app.post('/replicate/sticker', async (req, res) => {
