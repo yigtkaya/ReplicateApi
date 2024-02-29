@@ -1,14 +1,11 @@
 const Replicate = require('replicate');
 require('dotenv').config();
 const express = require('express');
-const { db } = require('./firebase');
 const port = 3000; // or any port you prefer
 app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true },),);
-
-console.log(process.env.REPLICATE_AUTH);
 
 const replicate = new Replicate({
     auth: process.env.REPLICATE_AUTH,
